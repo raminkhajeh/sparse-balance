@@ -1,0 +1,15 @@
+using Pkg
+
+Pkg.add("JLD")
+Pkg.add("FFTW")
+Pkg.add("Trapz")
+Pkg.add("Printf")
+Pkg.add("PyPlot")
+Pkg.add("Random")
+Pkg.add("Statistics")
+Pkg.add("Parameters")
+Pkg.add("SparseArrays")
+Pkg.add("ProgressMeter")
+Pkg.add("Distributions")
+Pkg.add("LinearAlgebra")
+Pkg.add("DelimitedFiles")
