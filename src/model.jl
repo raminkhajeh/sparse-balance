@@ -53,7 +53,7 @@ using DelimitedFiles
    progress::Bool = true      # show progress if true
 
 end
-dp = Params()
+dp = Params()                 # default parameters
 
 #################################################
 function runsim(;p = dp)
@@ -418,8 +418,8 @@ end
 #################################################
 function printParams(J, I_i;p = dp)
    runparams = string(
-            "N = ",       @sprintf("%d",p.N),
-         " | K = ",       @sprintf("%d",p.K),
+            "N = ",       @sprintf("%d",  p.N),
+         " | K = ",       @sprintf("%d",  p.K),
          " | J_ii = ",    @sprintf("%.2f",p.J_ii),
          " | g_ii = ",    @sprintf("%.2f",p.g_ii),
          " | ν = ",       @sprintf("%.2f",p.scaleg),
@@ -427,19 +427,19 @@ function printParams(J, I_i;p = dp)
          " | I = ",       @sprintf("%.2f",I_i),
          " | mean(J) = ", @sprintf("%.4f",mean(J)),
          " | std(J) = ",  @sprintf("%.4f",std(J)),
-         " | Φ = ",       @sprintf("%s",p.Φname),
+         " | Φ = ",       @sprintf("%s",  p.Φname),
          " | λ = ",       @sprintf("%.2f",p.λ),
-         " | dist = ",    @sprintf("%s",p.Jdist),
+         " | dist = ",    @sprintf("%s",  p.Jdist),
          " | ρ_e = ",     @sprintf("%.2f",p.ρ_e),
          " | dt = ",      @sprintf("%.4f",p.dt),
-         " | T = ",       @sprintf("%d",p.T),
-         " | s = ",       @sprintf("%d",p.seedJ), "\n")
+         " | T = ",       @sprintf("%d",  p.T),
+         " | s = ",       @sprintf("%d",  p.seedJ), "\n")
    printstyled(runparams, color=:green)
 end
 
 #################################################
 function genfilename(p)
-   SUFFIX = string("data/",p.prefix,
+   filename = string("./data/",p.prefix,
                    @sprintf("_N%d",     p.N),
                    @sprintf("_K%d",     p.K),
                    @sprintf("_T%d",     p.T),
@@ -458,7 +458,7 @@ function genfilename(p)
                    @sprintf("_sIC%d",   p.seedIC),
                    @sprintf("_sJ%d",    p.seedJ),
                    ".jld2")
-   return SUFFIX
+   return filename
 end
 
 #################################################

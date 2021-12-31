@@ -1,9 +1,11 @@
 using Pkg
 
 Pkg.add("JLD")
+Pkg.add("JLD2")
 Pkg.add("FFTW")
 Pkg.add("Trapz")
 Pkg.add("Printf")
+Pkg.add("FileIO")
 Pkg.add("PyPlot")
 Pkg.add("Random")
 Pkg.add("Statistics")
