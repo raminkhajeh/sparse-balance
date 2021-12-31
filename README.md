@@ -11,7 +11,7 @@ To directly run ```model.jl```, inside Julia REPL, enter the command
 
 To run the model using ```run.jl```, enter the command
 ```julia run.jl```
-which calls ```model.jl```, performs a sweep over the in-degree K, and plots example responses of the networks. Data and plots are saved under ```plots/``` and ```data/```, respectively.
+which calls ```model.jl```, performs a sweep over the in-degree, and plots example network responses. Data and plots are saved under ```plots/``` and ```data/```, respectively.
 
 The variable names in the code are as consistent as possible with those that appear in the manuscript.
 
